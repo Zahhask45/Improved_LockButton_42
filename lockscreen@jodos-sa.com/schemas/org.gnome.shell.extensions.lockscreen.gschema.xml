@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<schemalist gettext-domain="lockscreen@jodos-sa.com">
-  <enum id="org.gnome.shell.extensions.lockscreen.extension-position">
-    <value value="0" nick="Left"/>
-    <value value="1" nick="Center"/>
-    <value value="2" nick="Right"/>
-  </enum>
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
   <schema path="/org/gnome/shell/extensions/lockscreen/" id="org.gnome.shell.extensions.lockscreen">
-    <key name="extension-position"
+    <key type="i" name="extension-position"
       enum="org.gnome.shell.extensions.lockscreen.extension-position">
-      <default>"Right"</default>
+      <!--   <value value="0" nick="Left"/> -->
+      <!--   <value value="1" nick="Center"/> -->
+      <!--   <value value="2" nick="Right"/> -->
+      <default>2</default>
       <summary>Extension position</summary>
       <description></description>
     </key>
@@ -17,5 +15,7 @@
       <summary>Extension index</summary>
       <description></description>
     </key>
+  </schema>
+  <schema id="org.gnome.shell.extensions.lockscreen.bonus" path="/org/gnome/shell/extensions/lockscreen/">
   </schema>
 </schemalist>

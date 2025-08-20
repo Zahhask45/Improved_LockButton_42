@@ -56,7 +56,7 @@ var prefs = (function (Adw, GLib, Gio, Gtk) {
         // Add the page to the window
         const preferencesPage = new Adw.PreferencesPage();
         window.add(preferencesPage);
-
+        
         // Add the appearance group of preferences to the page
         const appearanceGroup = new Adw.PreferencesGroup({
             title: _("Appearance"),
@@ -100,6 +100,19 @@ var prefs = (function (Adw, GLib, Gio, Gtk) {
         extensionIndexActionRow.set_activatable_widget(extensionIndexSpinButton);
         // Connect the spin button with the settings
         settings.bind("extension-index", extensionIndexSpinButton, "value", Gio.SettingsBindFlags.DEFAULT);
+
+        
+        // Another tab
+        // const otherPage = new Adw.OtherPage();
+        // window.add(otherPage);
+        // // Add the Bonus group to the other page
+        // const bonusGroup = new Adw.OtherGroup({
+        //     title: _("Bonus"),
+        // });
+        // otherPage.add(bonusGroup);
+
+        
+
     }
     // Initialize the preferences
     function init(meta) {

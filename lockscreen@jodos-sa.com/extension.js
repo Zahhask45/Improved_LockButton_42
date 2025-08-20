@@ -117,7 +117,6 @@ function _lock() {
     if (debounceTimeout === null) {
       debounceTimeout = Mainloop.timeout_add(420, function() {
         debounceTimeout = null;
-/*	let proc = Gio.Subprocess.new(['xscreensaver-command', '-lock'], 0); */
 	let proc = Gio.Subprocess.new(['/usr/share/42/ft_lock'], 0);
 	proc.wait_async(null, null);
         return false;
